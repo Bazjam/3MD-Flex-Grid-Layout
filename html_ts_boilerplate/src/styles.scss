@@ -156,6 +156,10 @@ table {
   display: flex;
 }
 
+.pr-55px {
+  padding-right: 55px;
+}
+
 .mt-18px {
   margin-top: 18px;
 }
@@ -212,18 +216,23 @@ table {
 .mr-18px {
   margin-right: 18px;
 }
+
 .mr-20px {
   margin-right: 20px;
 }
+
 .mr-26px {
   margin-right: 26px;
 }
+
 .mr-33px {
   margin-right: 33px;
 }
+
 .mr-35px {
   margin-right: 35px;
 }
+
 .mr-105px {
   margin-right: 105px;
 }
@@ -308,13 +317,16 @@ table {
 
 .header__text-img-wrapper {
   display: flex;
-  flex-direction: row;
-  padding: 0 150px;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  // padding: 0 150px;
 }
 
 .header__text-block {
   width: 100%;
   max-width: 500px;
+  margin-right: 9%;
 }
 
 .header__img-block {
@@ -447,4 +459,104 @@ table {
 .footer {
   padding-top: 51px;
   text-align: center;
+}
+
+@media only screen and (max-width: 1024px) {
+  .skills__left-box, 
+  .skills__right-box {
+    width: 40%;
+  }
+  .skills__top-box {
+    margin-left: 9%;
+  }
+}
+
+
+@media only screen and (max-width: 845px) {
+  .skills {
+    background-size: cover;
+    height: auto;
+  }
+}
+
+@media only screen and (max-width: 816px) {
+  .header__text-block {
+    max-width: 456px;
+    margin-right: 4%;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .skills__left-box, 
+  .skills__right-box {
+    width: 46%;
+  }
+  .skills__top-box {
+    margin-left: 3%;
+  }
+
+
+
+}
+
+
+
+@media only screen and (max-width: 730px) {
+  .header__nav-list {
+    margin: 27px 60px 33px 0;
+  }
+
+  .header__text-img-wrapper {
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+  }
+
+  .header__img-block img {
+    margin-bottom: 34px;
+  }
+
+  .header__text-block {
+    margin: 0;
+    max-width: 328px;
+    text-align: center;
+  }
+
+  .header__h1-text {
+    margin-top: 48px;
+    margin-bottom: 27px;
+    font-size: 32px;
+    line-height: 40px;
+    text-align: center;
+    padding-right: 12px;
+  }
+
+  .header__p-text {
+    margin-bottom: 27px;
+  }
+
+  .skills__left-right-wrapper {
+    flex-direction: column;
+    align-items: center;
+    margin: 0 auto;
+  }
+
+.skills__left-box {
+  margin-right: 0;
+}
+
+.skills__left-box, 
+.skills__right-box {
+  width: 354px;
+}
+
+.skills__top-box {
+  width: 100%;
+  margin: 0 auto;
+  max-width: 354px;
+}
+
+
+
+
 }
