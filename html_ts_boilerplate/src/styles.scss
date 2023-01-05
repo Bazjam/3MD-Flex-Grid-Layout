@@ -315,6 +315,65 @@ table {
   justify-content: flex-end;
 }
 
+.header__nav-list-mobile {
+  display: block;
+  opacity: 0;
+  position: absolute;
+  top: 10px;
+  left: 50%;
+  background-color: rgba(0, 0, 0, 0.2);
+  transform: translateX(-50%); // seredina berja vovnimanija shirinu bloka
+  padding: 10px;
+  z-index: 10;
+  border-radius: 5px;
+
+  transition: opacity 0.3s ease;
+
+  &.show {
+    opacity: 1; // element pojavljaetsja 
+  }
+}
+
+.header__mobile-burger {
+  display: none;
+  width: auto;
+
+  @media only screen and (max-width: 768px) {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: space-between;
+    margin: 20px 18px 33px 0;
+    height: 24px;
+
+    &.open {
+      & .header__mobile-burger-item {
+        &:nth-child(1) {
+          transform: rotate(45deg);
+          margin-bottom: 10px;
+        }
+
+        &:nth-child(2) {
+          display: none;
+        }
+
+        &:nth-child(3) {
+          transform: rotate(-45deg);
+          margin-top: 10px;
+        }
+      }
+    }
+  }
+
+}
+
+.header__mobile-burger-item {
+  width: 30px;
+  height: 3px;
+  background-color: #21243D;
+  transition: all 0.3s ease;
+}
+
 .header__text-img-wrapper {
   display: flex;
   justify-content: center;
@@ -475,7 +534,7 @@ table {
 }
 
 @media only screen and (max-width: 1150px) {
- 
+
   .works {
     margin-left: 13%;
     display: flex;
@@ -491,9 +550,11 @@ table {
   .skills__right-box {
     width: 40%;
   }
+
   .skills__top-box {
     margin-left: 9%;
   }
+
   .works {
     margin-left: 9%;
   }
@@ -501,7 +562,7 @@ table {
 
 
 @media only screen and (max-width: 845px) {
- 
+
   .skills {
     background-size: cover;
     height: auto;
@@ -509,7 +570,7 @@ table {
 }
 
 @media only screen and (max-width: 816px) {
-  
+
   .header__text-block {
     max-width: 456px;
     margin-right: 4%;
@@ -522,13 +583,20 @@ table {
   .skills__right-box {
     width: 46%;
   }
+
   .skills__top-box {
     margin-left: 3%;
   }
+
   .works {
     width: 95%;
     margin-left: 3%;
   }
+
+  .header__nav-list {
+    display: none;
+  }
+
 }
 
 @media only screen and (max-width: 730px) {
@@ -601,6 +669,7 @@ table {
   .works__wrapper {
     flex-direction: column;
   }
+
   .works__img {
     width: auto;
     min-width: 340px;
