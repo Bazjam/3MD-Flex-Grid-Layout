@@ -417,12 +417,25 @@ table {
   max-width: 840px;
   margin: 0 auto;
   margin-top: 15px;
-
 }
 
 .works__wrapper {
   display: flex;
   flex-direction: row;
+}
+
+.works__img-one {
+  width: 245px;
+  min-width: 245px;
+  height: 180px;
+  border-radius: 6px;
+  overflow: hidden;
+
+  & img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+  }
 }
 
 .works__text-wrapper {
@@ -461,18 +474,34 @@ table {
   text-align: center;
 }
 
+@media only screen and (max-width: 1150px) {
+ 
+  .works {
+    margin-left: 13%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+
 @media only screen and (max-width: 1024px) {
-  .skills__left-box, 
+
+  .skills__left-box,
   .skills__right-box {
     width: 40%;
   }
   .skills__top-box {
     margin-left: 9%;
   }
+  .works {
+    margin-left: 9%;
+  }
 }
 
 
 @media only screen and (max-width: 845px) {
+ 
   .skills {
     background-size: cover;
     height: auto;
@@ -480,6 +509,7 @@ table {
 }
 
 @media only screen and (max-width: 816px) {
+  
   .header__text-block {
     max-width: 456px;
     margin-right: 4%;
@@ -487,19 +517,19 @@ table {
 }
 
 @media only screen and (max-width: 768px) {
-  .skills__left-box, 
+
+  .skills__left-box,
   .skills__right-box {
     width: 46%;
   }
   .skills__top-box {
     margin-left: 3%;
   }
-
-
-
+  .works {
+    width: 95%;
+    margin-left: 3%;
+  }
 }
-
-
 
 @media only screen and (max-width: 730px) {
   .header__nav-list {
@@ -541,22 +571,39 @@ table {
     margin: 0 auto;
   }
 
-.skills__left-box {
-  margin-right: 0;
+  .skills__left-box {
+    margin-right: 0;
+  }
+
+  .skills__left-box {
+    width: 354px;
+    margin-bottom: 17px;
+
+  }
+
+  .skills__right-box {
+    width: 354px;
+    margin-bottom: 38px;
+  }
+
+  .skills__top-box {
+    width: 100%;
+    font-size: 18px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+  }
+
 }
 
-.skills__left-box, 
-.skills__right-box {
-  width: 354px;
-}
+@media only screen and (max-width: 425px) {
 
-.skills__top-box {
-  width: 100%;
-  margin: 0 auto;
-  max-width: 354px;
-}
-
-
-
-
+  .works__wrapper {
+    flex-direction: column;
+  }
+  .works__img {
+    width: auto;
+    min-width: 340px;
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+  }
 }
